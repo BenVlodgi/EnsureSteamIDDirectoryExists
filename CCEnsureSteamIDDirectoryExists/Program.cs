@@ -17,7 +17,7 @@ namespace CCEnsureSteamIDDirectoryExists
             var puzzles = apertureTag.GetDirectories("puzzles").FirstOrDefault();
             if (puzzles == null) { LogProblem("Failed to find '\\aperturetag\\puzzles'"); return; }
 
-            var portal2 = apertureTag.GetDirectories("portal2").FirstOrDefault();
+            var portal2 = root.GetDirectories("portal2").FirstOrDefault();
             if (portal2 == null) { LogProblem("Failed to find '\\portal2'"); return; }
             var maps = portal2.GetDirectories("maps").FirstOrDefault();
             if (maps == null) { LogProblem("Failed to find '\\portal2\\maps'"); return; }
